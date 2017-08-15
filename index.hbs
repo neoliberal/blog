@@ -1,0 +1,18 @@
+{{!< shell}}
+{{> "short-header"}}
+<div class="site-content post-listing">
+  <div class="featured-listing">
+    {{> "listing"}}
+  </div>
+  <div class="category-listing">
+    <h3>Interests</h3>
+    {{#get "tags"}}
+      {{#foreach tags}}
+        <div class="tag-card">
+          <a href="{{url}}"><h4 class="tag-name">{{name}}</h4></a>
+          <div class="tag-description">{{description}}</div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>

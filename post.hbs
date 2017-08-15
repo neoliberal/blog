@@ -1,0 +1,26 @@
+{{!< shell}}
+
+{{#post}}
+<div class="site-header full-header">
+  <a class="blog-title-link" href="{{@blog.url}}">
+    <h1 class="blog-title">{{@blog.title}}</h1>
+  </a>
+  <div class="post-title-content">
+    <h1 class="post-title">{{title}}</h1>
+    <h2 class="post-author">by {{author}}</h1>
+  </div>
+</div>
+<div class="site-content post-content">
+  <div class="article-statistics">
+    <div class="article-time">Published {{date published_at timeago="true"}}.</div>
+    {{#if tags}}
+      <div class="article-tags">Tagged as {{tags limit=1}}</a>.</div>
+    {{/if}}
+  </div>
+  <article class="article-body">
+    {{content}}
+  </article>
+</div>
+
+
+{{/post}}
